@@ -1,13 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
 import Layout from './components/layout/Layout';
-import Home from './components/pages/Home';
+import CoinPage from './components/pages/CoinPage';
+import HomePage from './components/pages/HomePage';
 
 function App() {
   return (
     <Layout>
       <Routes path="/">
-        <Route path="Home" index element={<Home />} />
-        <Route path="*" element={<Home />} />
+        <Route path="home" index element={<HomePage />} />
+        <Route path="coin/:name" element={<CoinPage />} />
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </Layout>
   );

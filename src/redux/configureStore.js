@@ -1,6 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from './reducers';
+import { coinRankingApi } from './apiReducer/coinRanking';
 
-const store = configureStore({ reducer: rootReducer });
+const store = configureStore({
+  reducer: {
+    [coinRankingApi.reducerPath]: coinRankingApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(coinRankingApi.middleware),
+});
 
 export default store;

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crypto</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,9 +12,21 @@
         theme: {
           extend: {
             colors: {
-              color1: 'black',
-              color2: 'brown',
+              color1: '#60A5FA',
+              color2: '#1f3a72',
+              color3: '#256387',
+            },
+            opacity: {
+              '80': '0.8',
+              '100': '1',
             }
+          },
+          fontFamily: {
+            'control': ['Lato', 'ui-serif', 'Georgia'],
+            'body': ['Gill Sans', 'ui-serif', 'Georgia']
+          },
+          screens: {
+            'xs': '360px'
           }
         }
       }
