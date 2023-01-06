@@ -100,8 +100,8 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  cd crypto
   git clone https://github.com/heintayzar-hm/crypto.git
+  cd crypto
 ```
 
 
@@ -192,7 +192,7 @@ If you like this project and would like to have us contribute to your project, k
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
+Original Design Idea By [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
