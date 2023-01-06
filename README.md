@@ -114,12 +114,16 @@ Install this project with:
 ```sh
   npm install -f
 ```
-
+Add Env Variable: Make `.env` file and Add following data
+```sh
+  VITE_COIN_RANKING_API_URL = https://coinranking1.p.rapidapi.com
+  VITE_RAPID_API_HOST = coinranking1.p.rapidapi.com
+  VITE_RAPID_API_KEY = 6107eb7e01mshaa575c14a4015d7p1dc3abjsn96c8ae71d2bd
+```
 
 ### Usage
 
 To run the project, execute the following command:
-
 
 ```sh
   npm run dev
