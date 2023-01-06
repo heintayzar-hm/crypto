@@ -6,11 +6,20 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import { Provider } from 'react-redux';
+import {
+  fetch, Headers, Request, Response,
+} from 'cross-fetch';
+import { HashRouter } from 'react-router-dom';
 import Home from '../components/components/Home/Home';
 import { rawCoins } from '../dummy';
 import { coinRankingApiUrl } from '../redux/apiReducer/coinRanking';
 import store from '../redux/configureStore';
-// import mm from '../redux/apiReducer/coinRanking'
+
+global.fetch = fetch;
+global.Headers = Headers;
+global.Request = Request;
+global.Response = Response;
+global.AbortController = AbortController;
 
 describe('coinRankingApi', () => {
   const server = setupServer(
@@ -24,10 +33,17 @@ describe('coinRankingApi', () => {
   beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
   afterEach(() => server.resetHandlers());
   afterAll(() => server.close());
-  it('dispatches the correct actions for the getCoins endpoint', async () => {
-    render(<Provider store={store}><Home /></Provider>);
+  it('mocking data fetching and Redux Store connection', async () => {
+    render(<Provider store={store}><HashRouter><Home /></HashRouter></Provider>);
     await waitFor(() => {
-      expect(screen.findByTestId('tester'));
+      expect(screen.getAllByTestId('item').length).toBeGreaterThan(3);
+    });
+  });
+
+  it('Test the Component', async () => {
+    render(<Provider store={store}><HashRouter><Home /></HashRouter></Provider>);
+    await waitFor(() => {
+      expect(screen.getByTestId('tester').textContent).toBe('Top 10 CryptoCurrencies ');
     });
   });
 });

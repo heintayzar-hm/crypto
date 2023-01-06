@@ -18,7 +18,7 @@ const Coincard = (props) => {
           {' '}
           <div style={{ backgroundImage: `url(${coin.iconUrl})` }} className={`${(rank === 1) ? 'col-span-2 bg-[20%] aligns-center justify-center grid grid-cols-2' : 'bg-left p-4'} h-[200px] bg-[length:100px] bg-no-repeat bg-origin-content text-white`}>
             <div className={`${(rank === 1) ? 'col-start-2' : ''} w-full h-full relative flex flex-col justify-center`}>
-              <div className={`${(rank === 1) ? '' : 'absolute bottom-8 right-0'} text-4xl font-body font-black tracking-wider`}>
+              <div data-testid="item" className={`${(rank === 1) ? '' : 'absolute bottom-8 right-0'} text-4xl font-body font-black tracking-wider`}>
                 {coin.symbol}
               </div>
               <div className={`${(rank === 1) ? '' : 'absolute bottom-3 right-0'} break-words`}>
