@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+}
+
+.dropdown-arrow {
+  width: 22px;
+  height: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: x-large;
+  font-weight: 600;
+  padding: 10px;
+}
+
+p {
+  padding: 15px;
+}
+
+.dropdown-arrow::before,
+.dropdown-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.dropdown-arrow::before {
+  left: 4px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.dropdown-arrow::after {
+  left: 12px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.active-btn .dropdown-arrow::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.active-btn .dropdown-arrow::after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.color-theme:nth-child(4n + 5) {
+  background-color: rgba(31, 58, 114, 1);
+}
+
+.color-theme:nth-child(4n + 4) {
+  background-color: rgba(31, 58, 114, 1);
+}
+
+.color-theme-home {
+  background-color: rgba(31, 58, 114, 0.8);
+}
+
+.transition-easeinout {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.visibility-active > .visibility-hidden {
+  visibility: visible;
+  max-height: 3000px;
+}
+
+@media screen and (min-width: 768px) {
+  .color-theme {
+    background-color: rgba(31, 58, 114, 0.8);
+  }
+
+  .color-theme:nth-child(odd) {
+    background-color: rgba(31, 58, 114, 1);
+  }
+
+  .color-theme:nth-child(even) {
+    background-color: rgba(31, 58, 114, 0.5);
+  }
+}
