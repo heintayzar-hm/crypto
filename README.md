@@ -33,7 +33,7 @@
   - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
-![]()
+![](https://media.giphy.com/media/kuU9JCn3Em8COlXZvR/giphy.gif)
 
 # 📖 [crypto] <a name="about-project"></a>
 
@@ -70,7 +70,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://heintayzar-hm.github.io/crypto/dist/)
+- [Live Demo Link](https://crypto-28lp.onrender.com/#/home/)
 
 ## Pull Requests
 
