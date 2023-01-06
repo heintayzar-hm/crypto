@@ -82,7 +82,7 @@ const Coin = () => {
   ];
   return (
     <>
-      <div className="grid grid-cols-2 h-[300px] text-white color-theme-home">
+      <div className="grid grid-cols-2 h-[300px] text-white color-theme-home" data-testid="coin">
         <div className="w-full flex items-center justify-center">
           <img src={coinData.iconUrl} alt="logo" className="object-contain h-[200px]" />
         </div>
