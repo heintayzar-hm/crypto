@@ -112,7 +112,7 @@ Install this project with:
 
 
 ```sh
-  npm install
+  npm install -f
 ```
 
 
