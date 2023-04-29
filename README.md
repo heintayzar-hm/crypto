@@ -38,7 +38,6 @@
 # 📖 [crypto] <a name="about-project"></a>
 
 
-> This JavaScript capstone project is about building web application based on an external API. This project was done in a team of two members. We consumed [tmdb api](https://www.themoviedb.org/documentation/api) and [Invlovement Api](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270) and built a web app consisting two user interfaces.
 
 ## 🛠 Built With <a name="built-with"></a>
 
